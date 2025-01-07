@@ -5,6 +5,8 @@
 *.log
 *.pot
 *.pyc
+*.jpg
+*.ico
 .vscode/
 __pycache__/
 local_settings.py
