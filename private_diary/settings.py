@@ -7,7 +7,7 @@ SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY')
 DEBUG = False
 
 # 許可するホスト名リスト
-ALLOWED_HOSTS = [os.environ.get('ALLOWED_HOSTS')]
+ALLOWED_HOSTS = os.environ.get('ALLOWED_HOSTS', '').split(',')
 
 # 静的ファイルの設置場所
 STATIC_ROOT = '/usr/share/nginx/html/static'
@@ -66,3 +66,6 @@ LOGGING = {
     }
 }
 
+
+print("Environment ALLOWED_HOSTS:", os.environ.get('ALLOWED_HOSTS'))
+print("Processed ALLOWED_HOSTS:", os.environ.get('ALLOWED_HOSTS', '').split(','))
